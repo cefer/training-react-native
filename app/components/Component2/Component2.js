@@ -4,8 +4,10 @@ import {AppRegistry, Text, View, StyleSheet} from 'react-native';
 export default class Component2 extends Component{
    render(){
     return(
-        <View style={styles.myView}>
-            <Text style={styles.myText}>Hello Brad</Text>
+        <View>
+            <View style={styles.myView}>
+                <Text style={styles.myText}>Hello Brad</Text>
+            </View>
             <View style={styles.container}>
                 <View style={styles.v1}>
                     <Text>View 1</Text>
@@ -28,6 +30,25 @@ const styles = StyleSheet.create({
     },
     myText:{
         color: 'white'
+    },
+    container:{
+        flexDirection: 'row', 
+        height: 100
+    },
+    v1:{
+        flex:1,
+        backgroundColor:'red',
+        padding:10
+    },
+    v2:{
+        flex:1,
+        backgroundColor:'green',
+        padding:10
+    },
+    v3:{
+        flex:1,
+        backgroundColor:'black',
+        padding:10
     }
 })
 
